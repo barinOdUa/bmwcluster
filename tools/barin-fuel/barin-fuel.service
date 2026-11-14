@@ -1,0 +1,18 @@
+[Unit]
+Description=barin-fuel: average fuel consumption on the instrument cluster (drawn by cluster-render)
+After=cluster-render.socket
+Wants=cluster-render.socket
+
+[Service]
+# root: the vsomeip policy lets uid 0 subscribe to KombiIF. Reads the car only.
+# /run/barin-fuel/someip: the interface config made at each start from MainApp's generator
+RuntimeDirectory=barin-fuel
+ExecStart=/usr/bin/node /var/opt/barin-fuel/current/main.js
+# the unit's system.conf sends stdout nowhere by default: the log would never reach the journal
+StandardOutput=journal
+Nice=10
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

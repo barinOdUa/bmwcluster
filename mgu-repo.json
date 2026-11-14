@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "components": [
+    {
+      "id": "barin-fuel",
+      "kind": "tool",
+      "path": "tools/barin-fuel"
+    }
+  ]
+}

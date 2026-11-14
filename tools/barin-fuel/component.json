@@ -1,0 +1,110 @@
+{
+  "id": "barin-fuel",
+  "kind": "tool",
+  "version": "0.3.6",
+  "title": "Fuel on cluster",
+  "description": "Trip computer's average fuel consumption in the cluster's bottom strip, left of the outside temperature; optional oil warm-up and litres in the tank. Drawn by Cluster renderer, reads the car only. Settings and report via a USB stick with a barin-fuel folder.",
+  "mguHmi": [
+    "ID7"
+  ],
+  "requires": {
+    "cluster-render": "0.4.1",
+    "mgu-deploy": "0.4.0"
+  },
+  "uninstallable": true,
+  "files": [
+    {
+      "path": "main.js",
+      "from": "main.js",
+      "mode": "0644"
+    },
+    {
+      "path": "config.js",
+      "from": "config.js",
+      "mode": "0644"
+    },
+    {
+      "path": "consumption.js",
+      "from": "consumption.js",
+      "mode": "0644"
+    },
+    {
+      "path": "text.js",
+      "from": "text.js",
+      "mode": "0644"
+    },
+    {
+      "path": "tank.js",
+      "from": "tank.js",
+      "mode": "0644"
+    },
+    {
+      "path": "oil.js",
+      "from": "oil.js",
+      "mode": "0644"
+    },
+    {
+      "path": "cluster.js",
+      "from": "cluster.js",
+      "mode": "0644"
+    },
+    {
+      "path": "usb.js",
+      "from": "usb.js",
+      "mode": "0644"
+    },
+    {
+      "path": "fontprobe.js",
+      "from": "fontprobe.js",
+      "mode": "0644"
+    },
+    {
+      "path": "someip.js",
+      "from": "someip.js",
+      "mode": "0644"
+    },
+    {
+      "path": "oapgen.js",
+      "from": "oapgen.js",
+      "mode": "0644"
+    },
+    {
+      "path": "eventlog.js",
+      "from": "eventlog.js",
+      "mode": "0644"
+    },
+    {
+      "path": "glyphs.json",
+      "from": "glyphs.json",
+      "mode": "0644"
+    },
+    {
+      "path": "NOTICE",
+      "from": "NOTICE",
+      "mode": "0644"
+    },
+    {
+      "path": "OFL-Inter.txt",
+      "from": "OFL-Inter.txt",
+      "mode": "0644"
+    }
+  ],
+  "units": [
+    {
+      "name": "barin-fuel.service",
+      "from": "barin-fuel.service"
+    }
+  ],
+  "enable": [
+    {
+      "unit": "barin-fuel.service",
+      "target": "multi-user.target"
+    }
+  ],
+  "recmgr": [
+    "barin-fuel"
+  ],
+  "restart": [
+    "barin-fuel.service"
+  ]
+}

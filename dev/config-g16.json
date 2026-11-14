@@ -1,0 +1,17 @@
+{
+  "test_pattern": false,
+  "oil_enabled": true,
+  "tank_enabled": true,
+  "scale": 0.71,
+  "align": "left",
+  "x": 1302,
+  "y": 594,
+  "tank_x": 1227,
+  "tank_y": 594,
+  "tank_scale": 0,
+  "unit_label": "l/km",
+  "unit_scale": 0.8,
+  "oil_x": 423,
+  "oil_y": 414,
+  "oil_align": "center"
+}
