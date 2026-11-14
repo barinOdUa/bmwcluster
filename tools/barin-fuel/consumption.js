@@ -4,7 +4,7 @@
  *   consumptionAverage1BC1, consumptionAverage2BC2: 0.1 a step, 65535 = no value
  *   statusUnitOfMeasurementConsumptionBC: the unit the driver picked, an enum name or its number
  * (field names and scaling as idrive7-apps' Live Data reads them, apps/live_data/signals.js, MIT).
- * Which of the two counters is "since start" on a G16 is checked on the car: both are logged.
+ * Which of the two counters is "since start" on a G15 is checked on the car: both are logged.
  */
 
 const NO_VALUE = 65535;

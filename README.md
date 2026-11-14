@@ -4,7 +4,7 @@ A small [MGU Store](https://github.com/robertnisipeanu/mgu-store) tool for BMW c
 **minimalist cluster**: keep BMW's clean factory look and add only the few numbers you actually need, small and in
 BMW's own style, so it looks factory-made rather than a full redesign. Everything else on the cluster stays as it is.
 
-![barin-fuel on the cluster of a BMW G16](docs/g16-cluster.jpg)
+![barin-fuel on the cluster of a BMW G15](docs/g15-cluster.jpg)
 
 - **Average fuel consumption** from the board computer, coloured by value: **below 9** blue, **9 to 10.5** white,
   **above 10.5** yellow (l/100km).
@@ -26,7 +26,7 @@ How it works:
 - **No SSH needed:** settings come from a USB stick.
 - **Font:** Inter (SIL OFL 1.1), the closest free match to BMW Type Next, pre-baked into glyph masks.
 
-Tested on a 2023 BMW 840 Gran Coupe (G16) with Cluster renderer 0.6.0 and Waze on cluster 0.10.0: the Waze map in
+Tested on a 2023 BMW 840 Coupe (G15) with Cluster renderer 0.6.0 and Waze on cluster 0.10.0: the Waze map in
 the middle of the cluster and these readouts work together.
 
 ## Install
@@ -37,9 +37,9 @@ the middle of the cluster and these readouts work together.
 
 New versions arrive in the Store as updates: press **Update**, the Store restarts the tool by itself.
 
-## Setup on a G16
+## Setup on a G15
 
-While a layer of an app is on the cluster, BMW moves "COMFORT P" down into the bottom strip. On the G16 the litres
+While a layer of an app is on the cluster, BMW moves "COMFORT P" down into the bottom strip. On the G15 the litres
 start at the black mark on the white line above COMFORT, the consumption follows right after, both the size of
 COMFORT; the oil can sits centred under the "0" of the speed:
 
@@ -49,7 +49,7 @@ COMFORT; the oil can sits centred under the "0" of the speed:
   "oil_x": 423, "oil_y": 414, "oil_align": "center" }
 ```
 
-The full file: `dev/config-g16.json`. Other models may need other positions.
+The full file: `dev/config-g15.json`. Other models may need other positions.
 
 ## USB stick
 
@@ -61,7 +61,7 @@ Create a folder **`barin-fuel`** in the root of the stick. The tool leaves stick
 | `barin-fuel/report.txt` | the car | what the tool sees: BC1 and BC2, Cluster renderer's state, a log |
 | `barin-fuel/fonts.txt` | the car | fonts found on the head unit (2 minutes after start) |
 
-`config.json` **replaces** all settings, so put every key you want in it. On the G16 the head unit mounts USB sticks
+`config.json` **replaces** all settings, so put every key you want in it. On the G15 the head unit mounts USB sticks
 read-only, so `report.txt` and `fonts.txt` may not appear.
 
 ### First run: find the spot
